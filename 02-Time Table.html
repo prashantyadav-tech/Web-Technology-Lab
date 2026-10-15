@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid #444444;
+            padding: 6px 4px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        caption {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        thead th {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+        }
+
+        tfoot td {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            font-style: italic;
+            text-align: center;
+        }
+
+	/*b) Colour options for individual cells: lab hours vs elective hours*/
+
+        .lab {
+            background-color: #FFD8A8; /*orange tint for lab hours*/
+            font-weight: bold;
+        }
+
+        .elective {
+            background-color: #D0BFFF; /*purple tint*/
+            font-weight: bold;
+        }
+
+        .lunch {
+            background-color: #FFF3BF; /*yellow tint*/
+            font-weight: bold;
+        }
+
+	/*c) Colour options for entire rows*/
+
+        .row-odd {
+            background-color: #FFFFFF;
+        }
+
+        .row-even {
+            background-color: #F1F3F5;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Time Table</caption>
+
+        <thead>
+            <tr>
+                <th>Day / Time</th>
+                <th>09:00-10:00</th>
+                <th>10:00-11:00</th>
+                <th>11:00-12:00</th>
+                <th>12:00-01:00</th>
+                <th>01:00-02:00</th>
+                <th>02:00-03:00</th>
+                <th>03:00-04:00</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Monday -->
+            <tr class="row-odd">
+                <td>Monday</td>
+                <td>Maths</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td rowspan="5" class="lunch">Lunch<br>Break</td>
+                <td>English</td>
+                <td class="lab" colspan="2">AI Lab</td>
+            </tr>
+
+            <!-- Tuesday -->
+            <tr class="row-even">
+                <td>Tuesday</td>
+                <td>Physics</td>
+                <td>Maths</td>
+                <td>English</td>
+                <!-- lunch cell is merged from Monday, so no <td> here for lunch -->
+                <td>Chemistry</td>
+                <td>AI</td>
+                <td>Web Tech</td>
+            </tr>
+
+            <!-- Wednesday -->
+            <tr class="row-odd">
+                <td>Wednesday</td>
+                <td>Chemistry</td>
+                <td>English</td>
+                <td>Maths</td>
+                <!-- lunch cell is merged from Monday -->
+                <td>Physics</td>
+                <td class="lab" colspan="2">Web Technology Lab</td>
+            </tr>
+
+            <!-- Thursday -->
+            <tr class="row-even">
+                <td>Thursday</td>
+                <td>English</td>
+                <td>Chemistry</td>
+                <td>Physics</td>
+                <!-- lunch cell is merged from Monday -->
+                <td>Maths</td>
+                <td>Web Tech</td>
+                <td>AI</td>
+            </tr>
+
+            <!-- Friday -->
+            <tr class="row-odd">
+                <td>Friday</td>
+                <td>AI</td>
+                <td>Web Tech</td>
+                <td class="elective">Elective</td>
+                <!-- lunch cell is merged from Monday -->
+                <td class="elective">Elective</td>
+                <td>Library</td>
+                <td>Sports</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="8">Effective from: 01 September 2026 | Department of CS&E</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
