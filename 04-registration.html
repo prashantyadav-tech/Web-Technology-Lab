@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Registration Form</title>
+	<style>
+		body{
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		.container{
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 3px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+		}
+		h1{
+			text-align: center;
+			color: #333;
+		}
+		table{
+			width: 100%;
+			margin-top: 20px;
+		}
+		table td{
+			padding: 10px;
+		}
+		input[type="radio"], input[type="checkbox"]{
+			width: 12px;
+			height: 12px;
+		}
+		input,textarea{
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		label, .legend{
+			font-size: 14px;
+			color: #555;
+		}
+		button{
+			font-size: medium;
+			width: 100%;
+			border-radius: 5px;
+			border: none;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Student Registration Form</h1>
+		<form action="https://httpbin.org/post" method="post">
+			<table>
+				<tr>
+					<td><label for="Firstname">First Name:</label></td>
+					<td><input type="text" name="Firstname" id="Firstname" placeholder="Enter your first name" required></td>
+				</tr>
+				<tr>
+					<td><label for="Lastname">Last Name:</label></td>
+					<td><input type="text" name="Lastname" id="Lastname" placeholder="Enter your last name"></td>
+				</tr>
+				<tr>
+					<td class="legend">Gender</td>
+					<td>
+						<input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>
+						<input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="age">Age:</label></td>
+					<td><input type="number" name="age" id="age" min="16" max="25" step="1" placeholder="Age"></td>
+				</tr>
+				<tr>
+					<td><label for="dob">Date Of Birth:</label></td>
+					<td><input type="date" name="dob" id="dob" required></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email address:</label></td>
+					<td><input type="email" name="email" id="email" placeholder="Enter your email address" required></td>
+				</tr>
+				<tr>
+					<td><label for="password">Password:</label></td>
+					<td><input type="password" name="password" id="password" placeholder="Enter your password" minlength="8" required></td>
+				</tr>
+				<tr>
+					<td><label for="phoneno">Phone No.:</label></td>
+					<td><input type="tel" name="phoneno" id="phoneno" placeholder="Enter your phone no." pattern="[0-9]{10}" required></td>
+				</tr>
+				<tr>
+					<td><label for="address">Address:</label></td>
+					<td><textarea name="address" id="address" placeholder="Enter your address"></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="state">State:</label></td>
+					<td>
+						<input type="text" name="state" id="state" list="state-list" placeholder="Your state">
+						<datalist id="state-list">
+							<option value="Karnataka">
+							<option value="Andhra Pradesh">
+							<option value="West Bengal">
+							<option value="Uttar Pradesh">
+							<option value="Tamil Nadu">
+							<option value="Other">
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="pin">Pin code:</label></td>
+					<td><input type="text" name="pin" id="pin" placeholder="Enter pin code" pattern="[0-9]{6}" inputmode="numeric"></td>
+				</tr>
+				<tr>
+					<td class="legend">Hobbies:</td>
+					<td>
+						<input type="checkbox" name="Hobbies" id="Music" value="Music">
+						<label for="Music">Music</label>
+						<input type="checkbox" name="Hobbies" id="Movies" value="Movies">
+						<label for="Movies">Movies</label>
+						<input type="checkbox" name="Hobbies" id="Sports" value="Sports">
+						<label for="Sports">Sports</label>
+						<input type="checkbox" name="Hobbies" id="Travel" value="Travel">
+						<label for="Travel">Travel</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button type="submit" style="background-color: #4CAF50; color: white;">Submit</button>
+						<p></p>
+						<button type="reset" style="background-color: #f44336; color: white;">Reset</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
