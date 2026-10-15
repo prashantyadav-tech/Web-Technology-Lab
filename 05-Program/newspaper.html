@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Newspaper</title>
+<style>
+body{
+	font family:'Times New Roman', Times, serif; background-color:#f0f0f0; margin:0;
+}
+
+header{
+	background-color:#333;
+	color:#fff;
+	padding:1px;
+	text-align:center;
+	font-size:2.0em;
+}
+
+nav{
+	background-color:#444;
+	color:#fff;
+	padding:5px;
+	text-align:center;
+	font-size:1.1em;
+}
+
+nav a{
+	color:#fff; margin:0 10px; text-decoration:none;
+}
+
+.content{
+	display:flex; flex:1;
+}
+
+aside{
+	width:15%; padding:10px; background-color:#ccf4e7;
+}
+
+.side{
+	color:#00b1cd;
+}
+
+.main{
+	width:67%; background-color:#fafafa; padding:10px;
+}
+
+.main article{
+	background-color:#e0e0e0; padding:5px;
+}
+
+figure{
+	padding:10px; text-align:center; margin:10px 0;
+}
+
+.table-aside{
+	width:25%;
+	background-color:#fff;
+	padding:10px;
+}
+
+table{
+	width:100%; border-collapse:collapse;
+}
+
+
+th, td{
+	border:1px solid #ccc; padding:5px; text-align:center;
+}
+
+th{
+	background-color:#626060; color:#fff;
+}
+
+footer{
+	background-color:#333; color:#fff; text-align:center; padding:7px;
+}
+
+</style>
+</head>
+<body>
+<header>
+
+	<h1>INDIA TODAY</h1>
+</header>
+<nav>
+	<a href="#">Home</a>
+	<a href="#">Technology</a>
+	<a href="#">Taste of India</a>
+	<a href="#">Sports</a>
+</nav>
+<div class="content">
+	<aside>
+		<h3 style="text-align:center;">Latest News</h3>
+		<h4 class="side">INDIA NEWS</h4>
+		<p>HT This Day: October 22, 1954 -- Agreement signed on transfer of French enclaves to India.</p>
+		<hr>
+		<h4 class="side">BUSINESS</h4>
+		<p>October marks highest monthly FPI sell-off in history with &#8377;77,701 crores</p>
+		<hr>
+		<h4 class="side">SPORTS</h4>
+		<p>Kagiso Rabada shatters Waqar Younis' record for being quickest to 300 Test wickets</p>
+	</aside>
+	<section class="main">
+		<article>
+			<h2>Microsoft CEO Satya Nadella's 2024 pay rose 63% to &#36;79 million on stock awards</h2>
+			<p>Microsoft CEO Satya Nadella's fiscal 2024 compensation surged 63% to &#36;79.1 million, according to a filing on Thursday</p>
+		</article>
+		<figure>
+			<img src="p5-1.jpg" alt="Photograph of the Microsoft CEO" style="max-width:62%">
+			<figcaption style="font-size:small;color:#555;">
+				Executive Chairman and CEO of Microsoft Corporation, Satya Nadella
+			</figcaption>
+		</figure>
+	</section>
+	<section class="table-aside">
+		<table>
+			<caption style="padding:15px;">Weekly Weather Forecast</caption>
+			<thead>
+				<tr><th>Date</th><th>Weather</th><th>Temperature</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>21 - Oct</td><td>Scattered clouds</td><td>27&deg;C</td></tr>
+				<tr><td>22 - Oct</td><td>Scattered clouds</td><td>23&deg;C</td></tr>
+				<tr><td>23 - Oct</td><td>Scattered clouds</td><td>29&deg;C</td></tr>
+				<tr><td>24 - Oct</td><td>Broken clouds</td><td>26&deg;C</td></tr>
+			</tbody>
+		</table>
+		<article>
+			<br>
+			<h3>Bengaluru Temperature Yesterday</h3>
+			<p>Maximum temperature yesterday: 30&deg;C (at 16:00)<br>
+			<p>Minimum temperature yesterday: 21&deg;C (at 03:00)<br>
+			<p>Average temperature yesterday: 24&deg;C
+		</article>
+	</section>
+</div>
+<footer>
+	&copy;2024 INDIA TODAY
+</footer>
+</body>
+</html>
