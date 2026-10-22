@@ -5,8 +5,8 @@ body
     display: flex;
     justify-content: left;
     align-items: center;
-    height: 100vh;
-    margin: 120px;
+    height: 200vh;
+    margin: 240px;
     overflow: hidden;
 }
 h1
