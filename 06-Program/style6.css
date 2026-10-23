@@ -1,4 +1,4 @@
-/*body
+body
 {
     font-family: Arial, sans-serif;
     background-image: url(p6.jpg);
@@ -54,8 +54,9 @@ button:hover
 {
     color: #007bff;
     transform: scale(1.1);
-}*/
+}
 
+/*Using below code makes the background fix then using ctrl + '+' can enlarge the calci.
 
 body
 {
@@ -137,3 +138,4 @@ button:hover
     color: #007bff;
     transform: scale(1.05);
 }
+*/
