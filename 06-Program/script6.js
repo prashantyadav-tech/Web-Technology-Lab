@@ -5,12 +5,12 @@ function calculate(operation)
   let result;
 
   const needTwo=(operation!=='square-root' && operation!=='square');
-  if ((isNaN(num1) || needTwo && isNaN(num2)))
+  if (isNaN(num1) || (needTwo && isNaN(num2)))
   {
     document.getElementById("result").textContent = "Invalid input";
     return;
   }
-  
+
   switch (operation)
   {
     case "sum":
@@ -23,16 +23,16 @@ function calculate(operation)
       result = num1 * num2;
       break;
     case "quotient":
-      result = num2 > 0 ? num1 / num2 : "Division by zero is invalid";
+      result = num2 !== 0 ? num1 / num2 : "Division by zero is invalid";
       break;
     case "remainder":
-      result = num2 > 0 ? num1 % num2 : "Division by zero is invalid";
+      result = num2 !== 0 ? num1 % num2 : "Division by zero is invalid";
       break;
     case "power":
       result = Math.pow(num1, num2);
       break;
     case "square-root":
-      result = Math.sqrt(num1);
+      result = num1 >= 0 ? Math.sqrt(num1) : "Invalid input";
       break;
     case "square":
       result = Math.pow(num1, 2);
