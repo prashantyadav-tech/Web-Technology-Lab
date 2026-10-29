@@ -3,6 +3,14 @@ function calculate(operation)
   const num1 = parseFloat(document.getElementById("num1").value);
   const num2 = parseFloat(document.getElementById("num2").value);
   let result;
+
+  const needTwo=(operation!=='square-root' && operation!=='square');
+  if ((isNaN(num1) || needTwo && isNaN(num2)))
+  {
+    document.getElementById("result").textContent = "Invalid input";
+    return;
+  }
+  
   switch (operation)
   {
     case "sum":
