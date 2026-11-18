@@ -1,11 +1,13 @@
 <?php
 $counterFile = "counter.txt";
 
+// Create the counter file with the value 0 the very first time
 if(!file_exists($counterFile))
 {
     file_put_contents($counterFile, "0");
 }
 
+// Read the old count, add 1 and save it back (LOCK_EX stops two visitors clashing)
 $currentCount = (int) file_get_contents($counterFile);
 $newCount = $currentCount + 1;
 file_put_contents($counterFile, (string) $newCount, LOCK_EX);
